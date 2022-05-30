@@ -1,1 +1,107 @@
 /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#root {
+    position: relative;
+    background-color: #dbdbdb;
+    height: 100vh;
+}
+header {
+    background-color: #009688;
+    height: 100px;
+}
+#root-main {
+    position: absolute;
+    height: 95vh;
+    top: 2.5vh;
+    left: 10%;
+    width: 80%;
+    background-color: #fff;   
+}
+#root-main * {
+    border: 1px solid red;
+}
+
+/* custom style because Bootstrap SUCKS BALLS */
+.aside {
+    width: 40%;
+    height: 100%;
+}
+.main {
+    width: 60%;
+    height: 100%;
+}
+.main > * {
+    width: 100%;
+}
+
+.header, .footer {
+    height: 50px;
+}
+.header {
+    background-color: #dbdbdb;
+}
+.content{
+    height: calc(100% - 100px);
+    background-image: url("../img/background.jpg");
+}
+.footer {
+    background-color: #f3eeea;
+}
+
+/* list styles */
+li{
+    list-style: none;
+}
+
+/* img styles */
+.avatar-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+/* rectangles */
+.box {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    justify-content: space-between;
+}
+.box .text {
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+/* Utility Classes */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+/* 
+colors: 
+header #009688
+notification: #8edafc
+background:#dbdbdb
+
+main-gray: #eaeaea
+main.white: #ffffff
+main.highlight #e9ebeb
+#f3eeea
+
+
+*/
