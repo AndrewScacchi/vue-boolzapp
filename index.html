@@ -61,10 +61,10 @@
         <!-- main layout main section -->
         <section class="main flex-column">
             <div class="header flex-row">
-                <img class="avatar-pic" src="img/placeholder.jpg" alt="avatar-01">
+                <img class="avatar-pic" :src="'/img/' + contacts[activeContact].img" alt="Avatar">
                 <div class="text">
-                        <p>placeholder</p>
-                        <p>Ultimo messaggio alle placeholder</p>
+                        <p>{{contacts[activeContact].name}}</p>
+                        <p>Ultimo messaggio alle {{contacts[activeContact].lastOn}}</p>
                 </div>
                 <div class="icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -73,17 +73,17 @@
                 </div>
             </div>
             <div class="content flex-column no-wrap">
-
-                {{contacts[activeContact].name}}
-                <br>
-                {{contacts[activeContact].msgHistory}}
-
-
-                <!-- <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div  v-for="(item, i) in contacts[activeContact].msgHistory" :key="i" class="msg" :class="i.owner === 'me' ? 'msg-user' : '' ">{{contacts[activeContact].msgHistory[i].msg}}</div>
+                
+                <!-- 
+                <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="msg msg-user">msg2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="msg">msg3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div> -->
+                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div> 
+            -->
             </div>
+            
+
             <div class="footer flex-row">
                 <i class="fa-regular fa-face-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio">
