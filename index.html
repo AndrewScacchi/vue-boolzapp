@@ -46,7 +46,7 @@
             <!-- contact list -->
             <ul class="contact-list">
                 <!-- adding data using v-for -->
-                <li class="contact flex-row" v-for="(contact, i) in contacts" :key="i">
+                <li class="contact flex-row" v-for="(contact, i) in contacts" :key="i" @click="onClick(i)">
                     <img class="avatar-pic" :src="'/img/' + contact.img" alt="photo of contact">
                     <div class="text">
                         <p>{{contact.name}}</p>
@@ -61,10 +61,10 @@
         <!-- main layout main section -->
         <section class="main flex-column">
             <div class="header flex-row">
-                <img class="avatar-pic" src="img/contact_01.jpg" alt="avatar-01">
+                <img class="avatar-pic" src="img/placeholder.jpg" alt="avatar-01">
                 <div class="text">
-                        <h4>Nome Tizio</h4>
-                        <p>Ultimo messaggio alle 12:00</p>
+                        <p>placeholder</p>
+                        <p>Ultimo messaggio alle placeholder</p>
                 </div>
                 <div class="icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -73,10 +73,16 @@
                 </div>
             </div>
             <div class="content flex-column no-wrap">
-                <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+                {{contacts[activeContact].name}}
+                <br>
+                {{contacts[activeContact].msgHistory}}
+
+
+                <!-- <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="msg msg-user">msg2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="msg">msg3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div> -->
             </div>
             <div class="footer flex-row">
                 <i class="fa-regular fa-face-smile"></i>

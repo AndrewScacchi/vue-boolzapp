@@ -57,10 +57,15 @@ header {
 .icons i {
     margin: 5px;
 }
+i:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transform:scale(105%);
+}
 
 
 .content{
-    height: calc(100% - 100px);
+    height: calc(100% - 110px);
     background-image: url("../img/background.jpg");
     padding: 20px 40px;
     gap: 20px;
@@ -148,11 +153,13 @@ li{
     padding: 0 5px;
 }
 .footer {
-    height: 40px;
+    height: 50px;
     align-items: center;
 }
 .footer input {
     width: 80%;
+    height: 36px;
+    padding: 0 10px;
 }
 .footer i {
     width: 10%;
