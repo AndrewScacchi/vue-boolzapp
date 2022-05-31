@@ -1,8 +1,12 @@
+/* GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Montserrat:wght@500&family=Rubik+Mono+One&display=swap');
+
 /* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -23,9 +27,6 @@ header {
     width: 80%;
     background-color: #fff;   
 }
-#root-main * {
-    border: 1px solid red;
-}
 
 /* custom style because Bootstrap SUCKS BALLS */
 .aside {
@@ -40,15 +41,30 @@ header {
     width: 100%;
 }
 
-.header, .footer {
-    height: 50px;
-}
-.header {
+.header{
+    height: 60px;
+    align-items: center;
     background-color: #dbdbdb;
+    padding: 5px 10px;
 }
+.header .text {
+    margin-left: 10px;
+}
+.header .icons {
+    margin-left: auto;
+    color: darkgray;
+}
+.icons i {
+    margin: 5px;
+}
+
+
 .content{
     height: calc(100% - 100px);
     background-image: url("../img/background.jpg");
+    padding: 20px 40px;
+    gap: 20px;
+    overflow-y: scroll;
 }
 .footer {
     background-color: #f3eeea;
@@ -68,16 +84,97 @@ li{
 
 
 /* rectangles */
-.box {
+.contact-list {
+    /* horrible i need to correct this */
+    height: calc(100% - 165px);
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+.contact, .notification {
     width: 100%;
-    height: 60px;
-    padding: 5px;
+    height: 65px;
+    padding: 7.5px 10px;
     justify-content: space-between;
 }
-.box .text {
+.notification {
+    background-color: #8edafc;
+    font-size: 0.9em ;
+    align-items: center;
+}
+.contact .text,
+.notification .text {
     margin-right: auto;
     margin-left: 5px;
 }
+.notification i {
+    color: #8edafc;
+    background-color: white;
+    padding: 10px;
+    font-size: 1rem;
+    align-self: center;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.smallText {
+    font-size: 0.75em;
+    color: darkgray;
+}
+.contact:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+
+.input {
+    height: 40px;
+    padding: 5px 5%;
+    justify-content: space-between;
+    background-color: #fafafa;
+}
+.input label {
+    width: 15%;
+    height: 30px;
+    line-height: 28px;
+    font-weight: bold;
+    color: darkgray;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+}
+.input input {
+    width: 85%;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    padding: 0 5px;
+}
+.footer {
+    height: 40px;
+    align-items: center;
+}
+.footer input {
+    width: 80%;
+}
+.footer i {
+    width: 10%;
+    text-align: center;
+    color: grey;
+}
+
+/* messagge bubbles */
+.msg {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 45%;
+    
+}
+
+.msg-user {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
 
 /* Utility Classes */
 .flex-row {
@@ -90,6 +187,10 @@ li{
     flex-wrap: wrap;
     flex-direction: column;
 }
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
 
 /* 
 colors: 
@@ -102,4 +203,16 @@ main.white: #ffffff
 main.highlight #e9ebeb
 #f3eeea
 
+*/
+
+/* 
+Icon
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-circle-notch"></i>
+<i class="fa-solid fa-message"></i>
+<i class="fa-solid fa-ellipsis-vertical"></i>
+
+<i class="fa-solid fa-paperclip"></i>
+<i class="fa-solid fa-microphone"></i>
+<i class="fa-solid fa-face-smile"></i>
 */

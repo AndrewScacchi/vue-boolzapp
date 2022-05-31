@@ -14,39 +14,51 @@
 <body>
 <div id="root">
     <header id="root-head"></header>
+    <!-- main is in absolute position over header, ugly i know -->
     <main id="root-main" class="flex-column">
-        <aside class="aside">
+        <!-- main layout Aside -->
+        <aside class="aside flex-column">
             <div class="header flex-row">
-                <img class="avatar-pic" src="img/userAvatar.jpg" alt="avatar-01">
+                <img class="avatar-pic" :src=" '/img/' + user.img" alt="avatar-01">
                 <div class="text">
-                        <h4>Nome Tizio</h4>
+                        <p>{{user.name}}</p>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
-            <div class="box flex-row">
+            <div class="notification flex-row">
                 <i class="fa-solid fa-bell-slash mute-notify"></i>
                 <div class="text">
-                    <h4>Ricevi Notifiche di Nuovi Messaggi!</h4>
+                    <p>Ricevi Notifiche di Nuovi Messaggi!</p>
                     <a href="">Attiva notifiche desktop</a>
                 </div>
             </div>
-            <div class="input">
-                <label for="type">button</label>
-                <input type="text">
+            <!-- input section -->
+            <div class="input flex-row">
+                <label for="type"> 
+                    <i class="fa-solid fa-magnifying-glass"></i>           
+                </label>
+                <input type="text" placeholder=" Cerca o inizia una nuova chat">
             </div>
-            <ul>
+            <!-- contact list -->
+            <ul class="contact-list">
                 <!-- adding data using v-for -->
-                <li class="box flex-row" v-for="(contact, i) in contacts" :key="i">
+                <li class="contact flex-row" v-for="(contact, i) in contacts" :key="i">
                     <img class="avatar-pic" :src="'/img/' + contact.img" alt="photo of contact">
                     <div class="text">
-                        <h4>{{contact.name}}</h4>
-                        <p>Ultimo messaggio inviato</p>
+                        <p>{{contact.name}}</p>
+                        <p class="smallText">Ultimo messaggio inviato</p>
                     </div>
-                    <span>{{contact.lastOn}}</span>
+                    <span class="smallText">{{contact.lastOn}}</span>
                 </li>
                 
                 
             </ul>
         </aside>
+        <!-- main layout main section -->
         <section class="main flex-column">
             <div class="header flex-row">
                 <img class="avatar-pic" src="img/contact_01.jpg" alt="avatar-01">
@@ -54,12 +66,22 @@
                         <h4>Nome Tizio</h4>
                         <p>Ultimo messaggio alle 12:00</p>
                 </div>
+                <div class="icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
             </div>
-            <div class="content">
-
+            <div class="content flex-column no-wrap">
+                <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="msg msg-user">msg2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="msg">msg3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             </div>
-            <div class="footer">
-                <input type="text">
+            <div class="footer flex-row">
+                <i class="fa-regular fa-face-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fa-solid fa-microphone"></i>
             </div>
         </section>
     </main>
