@@ -1,28 +1,11 @@
 // Script for Exercise
 console.log("helloworld");
-const temporaryData = [
-        {
-            msg: "placeholder text1",
-             owner : "contact"
-        },
-         {
-            msg: "placeholder text2",
-            owner : "me"
-         },
-         {
-            msg: "placeholder text3",
-            owner : "contact"
-         },
-         {
-            msg: "placeholder text4",
-            owner : "me"
-         }
-     ];
 
 const boolzApp = new Vue({
     el : "#root",
     data : {
-        activeContact: 0,
+        newMsg : "",
+        activeContact : 0,
         user : {
             name : "Andrew BillyBob",
             img : "userAvatar.jpg"
@@ -65,7 +48,7 @@ const boolzApp = new Vue({
                         owner : "me"
                     },
                     {
-                        msg: "placeholder tex from tMcNamara_03",
+                        msg: "placeholder tex from McNamara_03",
                         owner : "contact"
                     },
                     {
@@ -140,10 +123,27 @@ const boolzApp = new Vue({
             this.activeContact = activeContact;
             // document.querySelector(".content").innerHTML =  "{{contacts[activeContact].name}}";
         },
-        printMsg(){
+        sendMsg(activeContact){
+            const newMsg = {
+                msg : this.newMsg,
+                owner : "me"
+            };
+            if(this.newMsg !== "") {
+                const activeContactMsg = this.contacts[activeContact].msgHistory
+                activeContactMsg.push(newMsg);
+                this.newMsg = "";
+                
+                setTimeout(function(){
+                    const replyMsg = {
+                        msg :"smettila di scrivermi",
+                        owner : "contact"
+                    };
+                    activeContactMsg.push(replyMsg);
 
-        }
-
+                },2000);
+            };
+            
+        },
     },
 
 
