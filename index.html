@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="content flex-column no-wrap">
-                <div  v-for="(item, i) in contacts[activeContact].msgHistory" :key="i" class="msg" :class="i.owner === 'me' ? 'msg-user' : '' ">{{contacts[activeContact].msgHistory[i].msg}}</div>
+                <div  v-for="(item, i) in contacts[activeContact].msgHistory" :key="i" class="msg" :class="i.owner == 'me' ? 'msg-user' : '' ">{{contacts[activeContact].msgHistory[i].msg}}</div>
                 
                 <!-- 
                 <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>

@@ -34,19 +34,19 @@ const boolzApp = new Vue({
                 lastOn: "15:30", 
                 msgHistory: [
                     {
-                        msg: "placeholder text Bobette_01",
+                        msg: "placeholder text from Bobette_01",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Bobette_02",
+                        msg: "placeholder text to Bobette_02",
                         owner : "me"
                     },
                     {
-                        msg: "placeholder text Bobette_03",
+                        msg: "placeholder text from Bobette_03",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Bobette_04",
+                        msg: "placeholder text to Bobette_04",
                         owner : "me"
                     }
                  ]
@@ -57,19 +57,19 @@ const boolzApp = new Vue({
                 lastOn: "12:15",
                 msgHistory: [
                     {
-                        msg: "placeholder text McNamara_01",
+                        msg: "placeholder text from McNamara_01",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text McNamara_02",
+                        msg: "placeholder text to McNamara_02",
                         owner : "me"
                     },
                     {
-                        msg: "placeholder tex tMcNamara_03",
+                        msg: "placeholder tex from tMcNamara_03",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text McNamara_04",
+                        msg: "placeholder text to McNamara_04",
                         owner : "me"
                     }
                  ]
@@ -80,23 +80,23 @@ const boolzApp = new Vue({
                 lastOn: "11:10",
                 msgHistory: [
                     {
-                        msg: "placeholder text Garfield_01",
+                        msg: "placeholder text from Garfield_01",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Garfield_02",
+                        msg: "placeholder text to Garfield_02",
                         owner : "me"
                     },
                     {
-                        msg: "placeholder text Garfield_03",
+                        msg: "placeholder text from Garfield_03",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Garfield_04",
+                        msg: "placeholder text from Garfield_04",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Garfield_05",
+                        msg: "placeholder text to Garfield_05",
                         owner : "me"
                     },
                 ]
@@ -107,27 +107,27 @@ const boolzApp = new Vue({
                 lastOn: "7:30",
                 msgHistory: [
                     {
-                        msg: "placeholder text Nakamura_01",
+                        msg: "placeholder text from Nakamura_01",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Nakamura_02",
+                        msg: "placeholder text from Nakamura_02",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Nakamura_03",
+                        msg: "placeholder text to Nakamura_03",
                         owner : "me"
                     },
                     {
-                        msg: "placeholder text Nakamura_04",
+                        msg: "placeholder text to Nakamura_04",
                         owner : "me"
                     },
                     {
-                        msg: "placeholder text Nakamura_05",
+                        msg: "placeholder text from Nakamura_05",
                         owner : "contact"
                     },
                     {
-                        msg: "placeholder text Nakamura_06",
+                        msg: "placeholder text to Nakamura_06",
                         owner : "me"
                     },
                 ]
