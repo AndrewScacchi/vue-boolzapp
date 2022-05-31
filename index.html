@@ -34,13 +34,14 @@
                 <input type="text">
             </div>
             <ul>
-                <li class="box flex-row">
-                    <img class="avatar-pic" src="img/contact_01.jpg" alt="photo of contact">
+                <!-- adding data using v-for -->
+                <li class="box flex-row" v-for="(contact, i) in contacts" :key="i">
+                    <img class="avatar-pic" :src="'/img/' + contact.img" alt="photo of contact">
                     <div class="text">
-                        <h4>Nome Tizio</h4>
-                        <p>last time connected</p>
+                        <h4>{{contact.name}}</h4>
+                        <p>Ultimo messaggio inviato</p>
                     </div>
-                    <span>12:00</span>
+                    <span>{{contact.lastOn}}</span>
                 </li>
                 
                 
@@ -68,7 +69,7 @@
 
 </div>
 <!-- CDN Vue.js -->
-<script src="<https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js>"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <!-- script.js -->
 <script src="js/script.js"></script>
 </body>

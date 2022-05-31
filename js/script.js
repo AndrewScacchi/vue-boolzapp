@@ -1,11 +1,26 @@
 // Script for Exercise
 console.log("helloworld");
+// const temporaryData = [
+//         {
+//             "msg": "placeholder text1",
+//             "owner" : "contact"
+//         },
+//         {
+//             "msg": "placeholder text2",
+//             owner : "me"
+//         },
+//         {
+//             msg: "placeholder text3",
+//             owner : "contact"
+//         },
+//         {
+//             msg: "placeholder text4",
+//             owner : "me"
+//         }
+//     ];
 
-const usersData = [];
-
-
-const myApp = new Vue({
-    el: "#root",
+const boolzApp = new Vue({
+    el : "#root",
     data : {
         user : {
             name : "Andrew BillyBob",
@@ -13,96 +28,24 @@ const myApp = new Vue({
         },
         contacts : [
             {
-                user: "Jane Bobette",
-                userImg: "avatar-01.jpg",
-                userLastOn: "15:30",
-                userHistory: [
-                    {
-                        msg: "placeholder text1",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text2",
-                        owner : "me"
-                    },
-                    {
-                        msg: "placeholder text3",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text4",
-                        owner : "me"
-                    }
-                ],
+                name: "Jane Bobette",
+                img: "contact_01.jpg",
+                lastOn: "15:30", 
             },
             {
-                user: "Andrew McNamara",
-                userImg: "avatar-02.jpg",
-                userLastOn: "12:15",
-                userHistory: [
-                    {
-                        msg: "placeholder text1",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text2",
-                        owner : "me"
-                    },
-                    {
-                        msg: "placeholder text3",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text4",
-                        owner : "me"
-                    }
-                ],
+                name: "Andrew McNamara",
+                img: "contact_02.jpg",
+                lastOn: "12:15",
             },
             {
-                user: "Sarah Garfield",
-                userImg: "avatar-03.jpg",
-                userLastOn: "31/05/2022 11:10",
-                userHistory: [
-                    {
-                        msg: "placeholder text1",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text2",
-                        owner : "me"
-                    },
-                    {
-                        msg: "placeholder text3",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text4",
-                        owner : "me"
-                    }
-                ],
+                name: "Sarah Garfield",
+                img: "contact_03.jpg",
+                lastOn: "11:10",
             },
             {
-                user: "Jim Nakamura",
-                userImg: "avatar-03.jpg",
-                userLastOn: "31/05/2022 7:30",
-                userHistory: [
-                    {
-                        msg: "placeholder text1",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text2",
-                        owner : "me"
-                    },
-                    {
-                        msg: "placeholder text3",
-                        owner : "contact"
-                    },
-                    {
-                        msg: "placeholder text4",
-                        owner : "me"
-                    }
-                ],
+                name: "Jim Nakamura",
+                img: "contact_04.jpg",
+                lastOn: "7:30",
             },  
         ],
 
@@ -112,4 +55,4 @@ const myApp = new Vue({
     },
 
 
-})
+});
