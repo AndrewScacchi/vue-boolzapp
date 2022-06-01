@@ -39,10 +39,15 @@
             <!-- input section -->
             <div class="input flex-row">
                 <label for="type"> 
-                    <i class="fa-solid fa-magnifying-glass"></i>           
+                    <i id="filterBtn" class="fa-solid fa-magnifying-glass" @click="contactFilter"></i>           
                 </label>
-                <input type="text" placeholder=" Cerca o inizia una nuova chat">
+
+
+                <!-- INPUT FILTER CONTACTS -->
+                <input id="filterContact" type="text" placeholder=" Cerca o inizia una nuova chat" v-model="input" >
+            
             </div>
+            <!-- v-model="filterString" @click="contactFilter"-->
             <!-- contact list -->
             <ul class="contact-list">
                 <!-- adding data using v-for -->
@@ -73,19 +78,15 @@
                 </div>
             </div>
             <div class="content flex-column no-wrap">
+                <!-- print all messages in activeContact -->
                 <div  v-for="(item, i) in contacts[activeContact].msgHistory" :key="i" class="msg" :class="item.owner == 'me' ? 'msg-user' : '' ">{{contacts[activeContact].msgHistory[i].msg}}</div>
-                
-                <!-- 
-                <div class="msg">msg1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="msg msg-user">msg2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="msg">msg3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="msg msg-user">msg4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div> 
-            -->
             </div>
             
 
             <div class="footer flex-row">
                 <i class="fa-regular fa-face-smile"></i>
+
+                <!-- INPUT NEW MSG TO CONTACT -->
                 <input type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendMsg(activeContact)">
                 <i class="fa-solid fa-microphone"></i>
             </div>

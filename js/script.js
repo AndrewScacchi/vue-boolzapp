@@ -5,6 +5,7 @@ const boolzApp = new Vue({
     el : "#root",
     data : {
         newMsg : "",
+        input : "",
         activeContact : 0,
         user : {
             name : "Andrew BillyBob",
@@ -14,6 +15,7 @@ const boolzApp = new Vue({
             {
                 name: "Jane Bobette",
                 img: "contact_01.jpg",
+                hidden: false,
                 lastOn: "15:30", 
                 msgHistory: [
                     {
@@ -37,6 +39,7 @@ const boolzApp = new Vue({
             {
                 name: "Andrew McNamara",
                 img: "contact_02.jpg",
+                hidden: false,
                 lastOn: "12:15",
                 msgHistory: [
                     {
@@ -60,6 +63,7 @@ const boolzApp = new Vue({
             {
                 name: "Sarah Garfield",
                 img: "contact_03.jpg",
+                hidden: false,
                 lastOn: "11:10",
                 msgHistory: [
                     {
@@ -87,6 +91,7 @@ const boolzApp = new Vue({
             {
                 name: "Jim Nakamura",
                 img: "contact_04.jpg",
+                hidden: false,
                 lastOn: "7:30",
                 msgHistory: [
                     {
@@ -123,6 +128,9 @@ const boolzApp = new Vue({
             this.activeContact = activeContact;
             // document.querySelector(".content").innerHTML =  "{{contacts[activeContact].name}}";
         },
+
+
+
         sendMsg(activeContact){
             const newMsg = {
                 msg : this.newMsg,
@@ -144,7 +152,30 @@ const boolzApp = new Vue({
             };
             
         },
+        contactFilter(){
+            //booooh son fuso devo fermarmi
+
+
+
+            // array.forEach(element => {
+                
+            // });
+
+
+
+            // for(i=0; i< (this.contacts.length - 1); i++){
+            //     let hiddenValue = this.contacts.hidden;
+            //     console.log(hiddenValue);
+            // }
+            
+        },
     },
-
-
 });
+
+// const btn = document.getElementById("filterBtn");
+// const search = document.querySelector("#filterContact");
+// btn.addEventListener("click",
+// function(){
+//     console.log(search.value);
+// });
+// console.log(value);
